@@ -8,7 +8,7 @@
     "start": "set NODE_MODE=Production && nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Sujal Kakadiya",
   "license": "ISC",
     "dependencies": {
       "alert": "^6.0.1",
