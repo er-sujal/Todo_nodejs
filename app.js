@@ -13,13 +13,15 @@ dotenv.config({
   path: "./database/config.env",
 });
 
-app.use(
-  cors({
-    origin: '*',
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: '*',
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     credentials: true,
+//   })
+// );
+
+app.use(cors({ credentials: true }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(bodyparser.urlencoded({ extended: true }));
