@@ -15,7 +15,7 @@ dotenv.config({
 
 app.use(
   cors({
-    origin: [process.env.FRONT_URI],
+    origin: '*',
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -33,5 +33,7 @@ app.use(errorHendler);
 app.use(errorhendler);
 
 app.listen(process.env.PORT, () => {
-  console.log(`Server is running ON PORT ${process.env.PORT} in ${process.env.NODE_MODE} Mode`);
+  console.log(
+    `Server is running ON PORT ${process.env.PORT} in ${process.env.NODE_MODE} Mode`
+  );
 });

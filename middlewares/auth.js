@@ -3,7 +3,7 @@ const User = require("../models/user.js");
 
 const isAuth = async (req, res, next) => {
   const { token } = req.cookies;
-  console.log(token)
+  console.log(token);
   if (!token) {
     return res.status(404).json({
       success: false,
